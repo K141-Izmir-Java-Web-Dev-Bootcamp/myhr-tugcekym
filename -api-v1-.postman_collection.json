@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "7db726d5-e192-4c6a-bf24-6294a8d86f17",
+		"name": "/api/v1/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15439803"
+	},
+	"item": [
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "create employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"sevda\",\r\n  \"password\": \"44dd\",\r\n  \"email\": \"sevda@gm.com\",\r\n  \"fullName\": \"sevda\",\r\n  \"address\": \"Ankaradd\",\r\n  \"birthYear\": \"3333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/employee"
+					},
+					"response": []
+				},
+				{
+					"name": "get all employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/employees"
+					},
+					"response": []
+				},
+				{
+					"name": "get employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/employee/3"
+					},
+					"response": []
+				},
+				{
+					"name": "update employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"sevda\",\r\n  \"password\": \"44dd\",\r\n  \"email\": \"sevda@gm.com\",\r\n  \"fullName\": \"sevda\",\r\n  \"address\": \"Ankaradd\",\r\n  \"birthYear\": \"3333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/employee/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/employee/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "human-resource",
+			"item": [
+				{
+					"name": "create human resource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"sevda\",\r\n  \"password\": \"44dd\",\r\n  \"email\": \"sevda@gm.com\",\r\n  \"fullName\": \"sevda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/human-resource"
+					},
+					"response": []
+				},
+				{
+					"name": "get all human resource",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/human-resources"
+					},
+					"response": []
+				},
+				{
+					"name": "get human resource",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/human-resource/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update human resource",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"sevda222\",\r\n  \"password\": \"4422dd\",\r\n  \"email\": \"sevd22a@gm.com\",\r\n  \"fullName\": \"s2evda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/human-resource/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete human resource",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/human-resource/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "interview",
+			"item": [
+				{
+					"name": "create interview",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"advertisement\": null,\r\n    \"steps\": [],\r\n    \"employee\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/interview"
+					},
+					"response": []
+				},
+				{
+					"name": "get all interview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/interviews"
+					},
+					"response": []
+				},
+				{
+					"name": "get interview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/interview/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update interview",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"advertisement\": null,\r\n    \"steps\": [],\r\n    \"employee\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/interview/3"
+					},
+					"response": []
+				},
+				{
+					"name": "delete interview",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/interview/3"
+					},
+					"response": []
+				},
+				{
+					"name": "create interview step",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"IK Görüşme #2\",\r\n    \"type\": 1,\r\n    \"interview_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/interview-step"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "advertisement",
+			"item": [
+				{
+					"name": "create advertisement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\": \"Famenad\",\r\n    \"title\": \"Laravel Dev\",\r\n    \"detail\": \"Laravel dev aranıyor\",\r\n    \"skills\": \"Laravel - Php - Mysql\",\r\n    \"startDate\": \"2022-09-09 15:00:00\",\r\n    \"endDate\": \"2022-09-10 15:00:00\",\r\n    \"humanResource\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/advertisement"
+					},
+					"response": []
+				},
+				{
+					"name": "get all advertisemenet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/advertisements"
+					},
+					"response": []
+				},
+				{
+					"name": "get advertisement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/advertisement/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update advertisement",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \"companyName\": \"Famenads\",\r\n    \"title\": \"Laravel Dev\",\r\n    \"detail\": \"Laravel dev aranıyor\",\r\n    \"skills\": \"Laravel - Php - Mysql\",\r\n    \"startDate\": \"2022-09-09 15:00:00\",\r\n    \"endDate\": \"2022-09-10 15:00:00\",\r\n    \"humanResource\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/advertisement/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete advertisement",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/advertisement/1"
+					},
+					"response": []
+				},
+				{
+					"name": "add advertisement user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employee\": {\"id\": 1},\r\n    \"advert\": {\"id\": 6}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/advertisement-user"
+					},
+					"response": []
+				},
+				{
+					"name": "get advertisement user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/advertisement-users/2"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
