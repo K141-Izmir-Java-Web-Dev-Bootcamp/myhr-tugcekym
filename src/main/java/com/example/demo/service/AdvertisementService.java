@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class AdvertisementService {
@@ -26,11 +27,17 @@ public class AdvertisementService {
     }
 
     public AdvertisementUser addUsers(AdvertisementUser advertisement) {
-        AdvertisementUser advertisementUser = advertisementUserRepository.getById(advertisement.getId());
-        if(advertisementUser == null) {
+        Optional<AdvertisementUser> optionalAdvertisement = this.isUserAdvertisement(advertisement.getEmployee().getId(), advertisement.getAdvert().getId());
+        if(optionalAdvertisement.get() != null) {
             return advertisementUserRepository.save(advertisement);
         }
-        return advertisementUser;
+        return advertisement;
+    }
+
+    public AdvertisementUser updateUser(AdvertisementUser advertisementUser) {
+        AdvertisementUser advertisement = advertisementUserRepository.findById(advertisementUser.getId())
+                .orElseThrow(() -> new NotFountException("Advertisement " + advertisementUser.getId() + " does not exist"));
+        return advertisementUserRepository.save(advertisement);
     }
 
     public Advertisement update(long id, Advertisement postAdvertisement) {
@@ -66,5 +73,10 @@ public class AdvertisementService {
     }
     public List<AdvertisementUser> getUserById(Long id) {
         return advertisementUserRepository.findByAdvertId(id);
+    }
+
+    public Optional<AdvertisementUser> isUserAdvertisement(Long employee_id, Long advert_id){
+       return advertisementUserRepository.findByAdvertId(advert_id)
+                .stream().filter(p -> p.getEmployee().getId() == employee_id).collect(Collectors.toList()).stream().findFirst();
     }
 }

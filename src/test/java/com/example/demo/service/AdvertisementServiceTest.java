@@ -28,7 +28,7 @@ public class AdvertisementServiceTest {
 
     @org.junit.Before
     public void setUp() throws Exception {
-        advertisementRepository = Mockito.mock(AdvertisementRepository.class);
+        advertisementRepository =  Mockito.mock(AdvertisementRepository.class);
         advertisementUserRepository = Mockito.mock(AdvertisementUserRepository.class);
 
         advertisementService = new AdvertisementService(advertisementRepository,advertisementUserRepository);

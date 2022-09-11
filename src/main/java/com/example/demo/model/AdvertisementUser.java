@@ -23,4 +23,6 @@ public class AdvertisementUser {
     @OneToOne
     @JoinColumn(name = "employee_id", referencedColumnName = "id")
     private Employee employee;
+
+    private String cvPath;
 }

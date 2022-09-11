@@ -9,4 +9,5 @@ public class AdvertisementUserDto {
     private long id;
     private Advertisement advert;
     private Employee employee;
+    private String cvPath;
 }
